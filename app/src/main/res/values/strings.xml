@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OnlyShare</string>
+    <string name="clipboard_empty">クリップボードが空です</string>
+    <string name="no_app_to_share">共有できるアプリがありません</string>
+</resources>
