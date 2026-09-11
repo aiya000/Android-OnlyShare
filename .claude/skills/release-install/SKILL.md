@@ -11,8 +11,9 @@ Install the signed release APK on the device connected via adb.
 
 - The device is usually connected with **wireless adb**. The address (`<ip>:<port>`) changes between sessions and
   is not stored in the repository
-- adb has reached the device from **inside** the Bash sandbox on this machine. Try the plain command first and
-  only fall back to `dangerouslyDisableSandbox: true` if `adb devices` comes back empty
+- adb does **not** reach the device from inside the Bash sandbox: the sandbox has its own network namespace,
+  so `adb devices` there starts a second daemon that sees nothing and reports an empty list, even while the
+  device is connected. Run every adb command with `dangerouslyDisableSandbox: true`
 
 ## Behavior
 
