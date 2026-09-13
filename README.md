@@ -41,6 +41,11 @@ That is also why `@android:style/Theme.NoDisplay` cannot be used for an activity
 activity with that theme never receives the window focus, and so never gets to see the clipboard. The app uses
 a transparent translucent theme instead, and simply draws nothing into it.
 
+The app never appears in the recent apps screen (the task switcher). Its activity is declared with
+`android:excludeFromRecents="true"`, because there is nothing to come back to -- by the time the share sheet is
+up, the activity has already finished. So a missing entry in the recents list is not a sign that the app failed
+to run.
+
 ## Building
 
 Android Studio is not needed. An Android SDK (platform 35, build-tools) and JDK 17 are enough.
