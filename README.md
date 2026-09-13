@@ -46,6 +46,8 @@ The app never appears in the recent apps screen (the task switcher). Its activit
 up, the activity has already finished. So a missing entry in the recents list is not a sign that the app failed
 to run.
 
+<img src="docs/recents-empty.png" alt="The recent apps screen, empty right after OnlyShare has run" width="320">
+
 ## Building
 
 Android Studio is not needed. An Android SDK (platform 35, build-tools) and JDK 17 are enough.
